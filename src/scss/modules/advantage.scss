@@ -1,0 +1,30 @@
+.advantage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: percentage( 800 / 1720);
+
+  li{
+    margin-bottom: space(3);
+    width: 48%;
+  }
+
+  h3{
+    @extend %subtitle;
+    font-size: em(20 , 16);
+    color: $color2;
+  }
+
+  p{
+    color: #5A5A5A;
+  }
+
+  @include down(450) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    & li{
+      width: 100%;
+    }
+  }
+
+}

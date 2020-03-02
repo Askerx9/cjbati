@@ -1,0 +1,98 @@
+.form{
+
+  width: 40%;
+  margin-left: space(15);
+  @include down(1100) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include down(550) {
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  p {
+    font-family: $f-b;
+    color: $color2;
+  }
+
+  .form_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: space(2);
+    flex-wrap: wrap;
+
+    @include down(550) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+  .form_row_check{
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .form_row > * {
+    flex-grow: 1;
+    margin: 0 space(2);
+    @include down(550) {
+      margin: 0;
+      width: 100%;
+      margin-bottom: space(2);
+    }
+  }
+
+  input, textarea {
+    padding: space(2) space(2);
+    border-radius: 5px;
+    border: none;
+  }
+
+  .form_checkbox {
+    min-width: 90px;
+
+    @include down(550) {
+      max-width: 120px;
+      margin-bottom: 3px;
+    }
+
+    & label{
+      font-family: $f-b;
+      font-size: em(12, 16);
+      border: 1px solid #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: space(1);
+      cursor: pointer;
+      margin-bottom: space(1);
+      width: 100%;
+      display: block;
+    }
+
+    & input{
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  input:checked ~ label {
+    background: $color2;
+  }
+
+  textarea{
+    resize: none;
+  }
+
+  button{
+    @extend %btn;
+    max-width: 150px;
+    cursor: pointer;
+  }
+}

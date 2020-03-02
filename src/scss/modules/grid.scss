@@ -1,0 +1,57 @@
+.grid{
+  width: percentage(1430 / 1920);
+  height: 610px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 65% auto;
+  grid-template-areas:
+  " big small"
+  " big small_2";
+  grid-gap: space(2);
+  @include down(1024) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+  " big "
+  " small"
+  "small_2";
+  }
+  @include down(400) {
+    width: 100%;
+  }
+
+  .grid__el{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    & > div{
+      color:#fff;
+      padding: space(5);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.48) -5.41%, rgba(0, 0, 0, 0) 95.67%);
+      * {
+        max-width: 400px;
+      }
+
+      h3{
+        @extend %subtitle;
+        margin-bottom: space(1);
+      }
+
+      & p{
+        padding: space(1);
+        border-left: 2px solid $color2;
+      }
+    }
+  }
+
+  .grid__el:nth-child(1){
+    grid-area: big;
+  }
+  .grid__el:nth-child(2){
+    grid-area: small;
+  }
+  .grid__el:nth-child(3){
+    grid-area: small_2;
+  }
+
+}

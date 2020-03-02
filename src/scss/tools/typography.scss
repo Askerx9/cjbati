@@ -1,0 +1,30 @@
+
+// Variables
+// ==================
+$f-a: 'IBM Plex Sans', sans-serif;
+$f-b: 'IBM Plex Serif', serif;
+
+// Title
+// ==================
+
+%title,
+%subtitle{
+  font-family: $f-b;
+  font-weight: 600;
+}
+
+%title{
+  font-size: em(52, 16);
+}
+
+%subtitle{
+  font-size: em(26, 16);
+}
+
+// Font face
+// ==================
+/*
+@include font-face('a', './fonts/HKGrotesk-Regular', 300 400 600 700, null, woff2 woff ttf svg eot);
+*/
+
+// Pour générer les polices : https://transfonter.org/

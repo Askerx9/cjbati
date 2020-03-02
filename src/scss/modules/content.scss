@@ -1,0 +1,55 @@
+.content{
+  @extend %container;
+  margin-bottom: space(20);
+  @include down(400) {
+    margin-bottom: space(20);
+  }
+  & h2{
+    @extend %title;
+    text-align: center;
+    padding-bottom: space(3);
+    margin-bottom: space(3);
+    position: relative;
+    &:after{
+      content: '';
+      width: 10%;
+      height: 2px;
+      background: $color2;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  & h2 + p{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 758px;
+    // min-width: 300px;
+    width: (758 / 1920);
+    margin-bottom: space(10);
+  }
+}
+
+.content--service{
+  @extend %container;
+  margin-top: space(-35);
+
+  @include down(800) {
+    margin-top: 0;
+    & .advantage{
+      width: 100%;
+    }
+  }
+
+
+  & h2{
+    text-align: left;
+    &:after{
+      left: 0;
+      transform: translate(0);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+#burger {
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  @include down(900) {
+    display: block;
+  }
+
+  &.is-active {
+    span {
+      transition: transform 0.3s cubic-bezier(.54,.1,.42,1.48), width 0.3s ease-in;
+      &:first-child {
+        transform: rotate(45deg) translate(2px,-4px);
+        width: 15px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+
+      &:last-child {
+        transform: rotate(45deg) translate(10px, -5px);
+        width: 15px;
+      }
+    }
+  }
+}
+
+#burger span {
+  display: block;
+  height: 3px;
+  background-color: #FFF;
+  border-radius: 100px;
+  transition: transform 0.6s cubic-bezier(.54,.1,.42,1.48), width 0.6s ease-out;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &:first-child {
+    transform-origin: 0 50%;
+    width: 10px;
+  }
+
+  &:nth-child(2) {
+    width: 30px;
+  }
+
+  &:last-child {
+    transform-origin: 100% 50%;
+    width: 20px;
+  }
+}

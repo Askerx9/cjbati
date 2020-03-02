@@ -1,0 +1,70 @@
+// Import Fornts
+// ==================
+
+// Variables
+// ==================
+$color: hsl(0, 100%, 64%);
+$color2: #D8AB2C;
+$containerWidth: 960px;
+
+:root{
+  --container: 1720px
+}
+
+// Outils
+// ==================
+@import "tools/reset";
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/typography";
+
+// Generic
+// ==================
+html{
+  background: #F7FAFB;
+}
+
+body {
+  font-family: $f-a;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  @include down(1280) {
+    font-size: 12px;
+  }
+}
+
+.container,
+%container{
+  width: percentage(1720/1920);
+  margin: 0 auto;
+}
+
+.colored{
+  color: $color2
+}
+
+.bold{
+  font-weight: 600;
+}
+
+// Modules
+// ==================
+@import "modules/link";
+@import "modules/layout";
+@import "modules/header";
+@import "modules/scroll";
+@import "modules/slider";
+@import "modules/content";
+@import "modules/grid";
+@import "modules/advantage";
+@import "modules/footer";
+@import "modules/contact-form";
+@import "modules/map";
+@import "modules/burger";
+
+// Pages
+// ==================
+// @import "pages/single";
+// @import "pages/single";

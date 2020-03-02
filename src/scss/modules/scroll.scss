@@ -1,0 +1,26 @@
+.scroll{
+  width: 2px;
+  height: 50px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+
+  &:before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: scroll 1.5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes scroll {
+  0% {top: 0}
+  100% {top: 100%}
+}

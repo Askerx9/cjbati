@@ -1,0 +1,36 @@
+%link{
+  font-family: $f-b;
+  font-style: italic;
+  font-size: 21px;
+  color: $color2;
+  display: inline;
+  position: relative;
+
+  &::after{
+    content: ">";
+    width: 21px;
+    height: 21px;
+    // background: #000;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(120%, 0);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover::after{
+    transform: translate(110%, 0);
+  }
+}
+
+%btn {
+  border: 1px solid $color2;
+  padding: space(2);
+  background: transparent;
+  color: #fff;
+  transition: background .3s ease-in-out;
+  &:hover{
+    background: $color2;
+  }
+}
