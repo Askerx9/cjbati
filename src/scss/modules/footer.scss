@@ -4,18 +4,26 @@
 
   &__contact{
     width: percentage(1430 / 1920);
-    min-height: 140px;
+    // min-height: 140px;
+    padding: space(6) 0;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    // justify-content: space-around;
     background: #D8AB2C;
     transform: translateY(-50%);
-    @include down(1200) {
-      flex-direction: column;
+
+    & > div {
+      display: flex;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
-      padding: 20px;
+      width: 100%;
+      @include down(1200) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
     }
     @include down(400) {
       width: 100%;

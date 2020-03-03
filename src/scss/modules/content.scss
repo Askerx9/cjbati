@@ -38,7 +38,7 @@
   width: percentage(1430 / 1920);
   margin-top: space(-45);
 
-  @include down(800) {
+  @include down(1349) {
     margin-top: 0;
     & .advantage{
       width: 100%;

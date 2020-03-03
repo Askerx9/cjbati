@@ -25,11 +25,13 @@ const Footer = () => {
       fluid={data.background.childImageSharp.fluid}
     >
       <div className={'footer__contact'}>
-        <p>
-          Techniques traditionnelles, modernes et innovantes!<br/>
-          <small>Notre expérience et notre professionalisme rejoindront vos exigences en matière de travail soigné.</small>
-        </p>
-        <Link className={'contact__link'} to="/contact">Contactez-nous</Link>
+        <div>
+          <p>
+            Techniques traditionnelles, modernes et innovantes!<br/>
+            <small>Notre expérience et notre professionalisme rejoindront vos exigences en matière de travail soigné.</small>
+          </p>
+          <Link className={'contact__link'} to="/contact">Contactez-nous</Link>
+        </div>
       </div>
       <div className={'container footer__container'}>
         <div className={'about'}>

@@ -33,14 +33,6 @@ module.exports = {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     google: {
-    //       families: ['IBM Plex Sans:400,600', 'IBM Plex Serif']
-    //     }
-    //   }
-    // },
     {
       resolve: `gatsby-plugin-sass`,
       options: {

@@ -1,8 +1,9 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
 import gsap from 'gsap'
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,7 +16,25 @@ import EmailSVG from '../images/pictos/email.svg'
 
 const IndexPage = () => {
 
-  gsap.registerPlugin(ScrollToPlugin);
+  gsap.registerPlugin(CSSRulePlugin, ScrollToPlugin);
+
+  useEffect(() => {
+    const gradient = CSSRulePlugin.getRule(".section-header--index > div::after");
+
+    console.log(gradient)
+
+    gsap.fromTo(gradient, {
+      cssRule: {
+        backgroundImage: "radial-gradient(0% 0% at 86.5% 29.74%, rgba(0, 0, 0, 0) 0%, #000000 100%)"
+      }
+    },{
+      cssRule:{
+        backgroundImage: "radial-gradient(293.86% 293.83% at 86.5% 29.74%, rgba(0, 0, 0, 0) 0%, #000000 100%)"
+      },
+      duration: 4,
+      delay: 1.5
+    })
+  })
 
   const data = useStaticQuery(graphql`
     query {
@@ -56,10 +75,11 @@ const IndexPage = () => {
       <SEO title="Home" />
       <BackgroundImage
         Tag="section"
-        className={'section-header'}
+        className={'section-header section-header--index'}
         fluid={data.background.childImageSharp.fluid}>
 
-        <div className={"container container--margin"}>
+        <div>
+          <div className={"container container--margin"}>
 
           <h1 className={'title'}>
             CJBati rénovation,<br></br>
@@ -78,6 +98,7 @@ const IndexPage = () => {
             </ul>
           </div>
 
+          </div>
         </div>
 
       </BackgroundImage>
@@ -89,7 +110,7 @@ const IndexPage = () => {
             et parquet, CJBati rénovation saura répondre à vos <span className={"bold"}>exigences</span> en
             matière de travail soigné!
           </p>
-          <Link className={'slider__link'} to="/">Rénovation</Link>
+          <div className="align-right"><Link className={'slider__link'} to="/">Rénovation</Link></div>
         </li>
         <li className={'swiper-slide'}>
           <p className={'slider__text'}>

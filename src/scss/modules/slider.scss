@@ -1,14 +1,10 @@
 .slider{
-  display: flex;
-  justify-content: flex-end;
+  // display: flex;
+  // justify-content: flex-end;
   color: #5A5A5A;
   top: -60%;
   transform: translateY(-50%);
   margin-bottom: -100px;
-
-
-
-
 
   & .swiper-container{
     margin-right: 0;
@@ -16,6 +12,10 @@
     height: em(490, 16);
     background: #fff;
     box-shadow: 0px -1.77783px 3.48718px rgba(0, 0, 0, 0.0170123), 0px -1.38855px 9.64159px rgba(0, 0, 0, 0.0209053), 0px 3.26508px 23.2132px rgba(0, 0, 0, 0.0294127), 0px 22px 77px rgba(0, 0, 0, 0.07);
+    @include down(1349) {
+      margin-right: auto;
+      width: 80%;
+    }
     @include down(800) {
       margin-right: auto;
       width: 80%;
@@ -28,11 +28,11 @@
 
   li{
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: em(150,24) em(200,24) em(100);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    padding: em(150,24) 20% em(100);
     width: percentage(950 / 1920);
     max-height: 490px;
     @include down(1024) {
@@ -53,6 +53,7 @@
   &__link{
     @extend %link;
     align-self: flex-end;
+    text-align: right;
     font-size: em(20,24);
   }
 }

@@ -1,20 +1,26 @@
 .grid{
   width: percentage(1430 / 1920);
-  height: 610px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 65% auto;
-  grid-template-areas:
-  " big small"
-  " big small_2";
-  grid-gap: space(2);
-  @include down(1024) {
-    grid-template-columns: 1fr;
+
+
+  @supports(display: grid) {
+    height: 610px;
+    display: grid;
+    grid-template-columns: 65% auto;
     grid-template-areas:
-  " big "
-  " small"
-  "small_2";
+    " big small"
+    " big small_2";
+    grid-gap: space(2);
+
+    @include down(1024) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+    " big "
+    " small"
+    "small_2";
+    }
   }
+
   @include down(400) {
     width: 100%;
   }
@@ -23,6 +29,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 600px;
+    margin-bottom: space(2);
+
+    @supports(display: grid) {
+      height: auto;
+      margin-bottom: 0;
+    }
 
     &:hover > div{
       box-shadow: inset 0px -150px 83px -71px rgba(0,0,0,0.35);
