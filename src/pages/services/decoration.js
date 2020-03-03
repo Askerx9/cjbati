@@ -22,7 +22,7 @@ const DecorationPage = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 500, quality: 80) {
+              fluid(maxWidth: 800, quality: 100) {
                 src
                 ...GatsbyImageSharpFluid
               }
@@ -72,7 +72,7 @@ const DecorationPage = () => {
 
       <section className={'content content--service'}>
         <h2>
-          L'avantage CJ bati
+          L'avantage CJBati rénovation
         </h2>
 
         <ul className={'advantage'}>

@@ -13,7 +13,7 @@ const ContactPage = () => {
     query {
       background: file(relativePath: { eq: "contact/bg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 2400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -111,10 +111,10 @@ const ContactPage = () => {
             </div>
 
             <div className={'form_row'}>
-                <textarea name="message" id="message" rows="5" placeholder="Message" />
+                <textarea name="message" id="message" rows="10" placeholder="Message" />
             </div>
 
-            <div className={'form_row'}>
+            <div className={'form_row form_row_right'}>
               <button type="submit">Envoyer</button>
             </div>
           </form>
@@ -128,11 +128,11 @@ const ContactPage = () => {
 
       <section className={'content'}>
         <h2>
-          CJ bati
+          CJBati rénovation
         </h2>
         <p>
-        Nous sommes une société de peinture composée de professionnels de la décoration intérieure et extérieure, de la rénovation et de la transformation de bâtiment.
-Une équipe qualifiée, motivée et compétente à votre disposition pour concrétiser vos projets de construction, d'embellissement, d'entretien de bâtiment
+        Nous sommes une société de peinture composée de <span className="bold">professionnels</span> de la décoration intérieure et extérieure, de la <span className="bold">rénovation</span> et de la <span className="bold">transformation</span> de bâtiment.
+Une équipe <span className="bold">qualifiée</span>, <span className="bold">motivée</span> et <span className="bold">compétente</span> à votre disposition pour concrétiser vos projets de <span className="bold">construction</span>, <span className="bold">d'embellissement</span>, d'<span className="bold">entretien</span> de bâtiment
         </p>
       </section>
 

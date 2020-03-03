@@ -62,12 +62,13 @@
 
   & .swiper-container{
     border: space(1) solid #fff;
+    width: 700px;
   }
 }
 
 .swiper-pagination-bullet {
-  width: 30px !important;
-  height: 4px !important;
+  width: 40px !important;
+  height: 3px !important;
   border-radius: 0 !important;
 }
 .swiper-pagination-bullet-active {

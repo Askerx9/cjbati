@@ -48,7 +48,7 @@ const Footer = () => {
             Coordonnées
           </h2>
           <p>
-            CJ BATI <br/>
+            CJBati rénovation <br/>
             Nering, 28<br/>
             1650 Beersel
           </p>

@@ -61,7 +61,6 @@
 
   .about{
     width: percentage(560 / 1430);
-    // min-width: 300px;
     @include down(400) {
       width: 100%;
     }

@@ -35,7 +35,8 @@
 
 .content--service{
   @extend %container;
-  margin-top: space(-35);
+  width: percentage(1430 / 1920);
+  margin-top: space(-45);
 
   @include down(800) {
     margin-top: 0;
@@ -47,6 +48,7 @@
 
   & h2{
     text-align: left;
+    margin-bottom: space(6);
     &:after{
       left: 0;
       transform: translate(0);

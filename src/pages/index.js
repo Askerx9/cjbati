@@ -1,7 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
-// import Img from "gatsby-image/withIEPolyfill"
+import gsap from 'gsap'
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,13 +12,16 @@ import FacebookSVG from '../images/pictos/facebook-logo.svg'
 import InstaSVG from '../images/pictos/instagram.svg'
 import EmailSVG from '../images/pictos/email.svg'
 
+
 const IndexPage = () => {
+
+  gsap.registerPlugin(ScrollToPlugin);
 
   const data = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "home_header_bg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 2400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -58,7 +62,7 @@ const IndexPage = () => {
         <div className={"container container--margin"}>
 
           <h1 className={'title'}>
-            CJ bati,<br></br>
+            CJBati rénovation,<br></br>
             entreprise de peinture <br /> <span className={"colored"}>et décoration</span>
           </h1>
           <p>
@@ -66,7 +70,7 @@ const IndexPage = () => {
           </p>
 
           <div className={"header__footer"}>
-            <div className={'scroll'}></div>
+            <div className={'scroll'} onClick={() => gsap.to(window, {duration: 2, scrollTo: {y: ".swiper-container", offsetY: 50}})}></div>
             <ul className={"social"}>
               <li><a href="http://google.be"><FacebookSVG /></a></li>
               <li><a href="http://google.be"><InstaSVG /></a></li>
@@ -82,20 +86,20 @@ const IndexPage = () => {
         <li className={'swiper-slide'}>
           <p className={'slider__text'}>
             Vous avez besoin d'un <span className={"bold"}>spécialiste</span> en revêtement de sol
-            et parquet, CJ bati saura répondre à vos <span className={"bold"}>exigences</span> en
+            et parquet, CJBati rénovation saura répondre à vos <span className={"bold"}>exigences</span> en
             matière de travail soigné!
           </p>
           <Link className={'slider__link'} to="/">Rénovation</Link>
         </li>
         <li className={'swiper-slide'}>
           <p className={'slider__text'}>
-            L'équipe de CJ Bati s'occupe de tous vos travaux d'intérieur
+            L'équipe de CJBati rénovation s'occupe de tous vos travaux d'intérieur
             mais aussi du nettoyage et de la peinture des façades.
           </p>
         </li>
         <li className={'swiper-slide'}>
           <p className={'slider__text'}>
-          CJ Bati réalise une étude de votre chantier,
+          CJBati rénovation réalise une étude de votre chantier,
           écoute vos envies et réalise vos désirs !
           </p>
         </li>
@@ -103,7 +107,7 @@ const IndexPage = () => {
 
       <section className={'content'}>
         <h2>
-          L'avantage de travailler<br />avec CJ bati
+          L'avantage de travailler<br />avec CJBati rénovation
         </h2>
         <p>
           Pour répondre entièrement à <span className={'bold'}>vos besoins</span>,
@@ -138,7 +142,7 @@ const IndexPage = () => {
                 Devis gratuit et compétitif
               </h3>
               <p>
-                CJ Bati se penche sur l'étude de votre projet gratuitement et
+                CJBati rénovation se penche sur l'étude de votre projet gratuitement et
                 s'engage à vous remettre un devis compétitif.
               </p>
             </div>
@@ -154,7 +158,7 @@ const IndexPage = () => {
                 Patron sur le chantier
               </h3>
               <p>
-                CJ Bati met un point d'honneur à être sur tous les chantiers,
+                CJBati rénovation met un point d'honneur à être sur tous les chantiers,
                 ansi vous avez un seul interlocuteur.
               </p>
             </div>

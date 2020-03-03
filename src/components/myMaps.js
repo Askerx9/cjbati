@@ -13,7 +13,7 @@ const MyMaps = () => {
             attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           />
         <Marker position={position}>
-          <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+          <Popup>CJBati Rénovation</Popup>
         </Marker>
       </Map>
     )

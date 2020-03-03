@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `CJ bati`,
-    description: `CJ bati, entreprise de peinture et décoration`,
+    title: `CJBati rénovation`,
+    description: `CJBati rénovation, entreprise de peinture et décoration`,
     author: `@predicat`,
   },
   plugins: [
@@ -33,14 +33,14 @@ module.exports = {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['IBM Plex Sans', 'IBM Plex Serif']
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['IBM Plex Sans:400,600', 'IBM Plex Serif']
+    //     }
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
