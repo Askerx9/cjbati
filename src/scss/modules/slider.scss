@@ -8,6 +8,8 @@
 
 
 
+
+
   & .swiper-container{
     margin-right: 0;
     width: percentage(950 / 1920);
@@ -70,4 +72,8 @@
 }
 .swiper-pagination-bullet-active {
   background-color: $color2 !important;
+}
+
+.slider img{
+  object-fit: cover;
 }

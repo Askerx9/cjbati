@@ -23,6 +23,7 @@ const PeinturePage = () => {
           node {
             childImageSharp {
               fluid(maxWidth: 500, quality: 80) {
+                src
                 ...GatsbyImageSharpFluid
               }
             }
@@ -34,11 +35,15 @@ const PeinturePage = () => {
 
   const sliderElements = data.slider.edges.map(element => {
     return (
-      <Img
-        fluid={element.node.childImageSharp.fluid}
-        objectFit="cover"
-        objectPosition="50% 50%"
-        loading="eager"
+      // <Img
+      //   fluid={element.node.childImageSharp.fluid}
+      //   objectFit="cover"
+      //   objectPosition="50% 50%"
+      //   loading="eager"
+      //   key = {element.node.id}
+      // />
+      <img
+        src={element.node.childImageSharp.fluid.src}
         key = {element.node.id}
       />
     )
