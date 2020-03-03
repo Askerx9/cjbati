@@ -6,11 +6,15 @@
 .map {
   margin-top: space(-80);
   width: percentage(750 / 1720);
-  height: 700px;
+  height: 70vmin;
   min-width: 300px;
   min-height: 300px;
   box-shadow: 0px -1.77783px 3.48718px rgba(0, 0, 0, 0.0170123), 0px -1.38855px 9.64159px rgba(0, 0, 0, 0.0209053), 0px 3.26508px 23.2132px rgba(0, 0, 0, 0.0294127), 0px 22px 77px rgba(0, 0, 0, 0.07);
   border: space(1) solid #fff;
+
+  @include down(1280) {
+    margin-top: space(-50);
+  }
 
   @include down(1100) {
     margin-top: -200px;

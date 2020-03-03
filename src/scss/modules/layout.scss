@@ -2,81 +2,82 @@
   width: 100%;
   min-height: 140vh;
   color: #fff;
-  & .container{
-    height: 100vh;
-    position: relative;
+}
+.section-header .container{
+  height: 100vh;
+  position: relative;
+}
+.section-header h1{
+  @extend %title;
+  padding-top: 45.85vh;
+  margin-top: 0;
+  margin-left: space(16);
+
+  @include down(1024) {
+    margin-left: percentage(100 / 1720);
   }
 
-  & h1{
-    @extend %title;
-    // width: percentage(660 / 1920);
-    padding-top: 45.85vh;
-    margin-top: 0;
-    margin-left: space(16);
-    @include down(1024) {
-      margin-left: percentage(100 / 1720);
-    }
-    @include down(500) {
-      margin-left: 0;
-      padding-top: 30vh;
-    }
+  @include down(500) {
+    margin-left: 0;
+    padding-top: 30vh;
   }
-  & h1+p{
-    min-width: 250px;
-    width: percentage(550 / 1920);
-    padding: space(2);
-    margin-left: space(55);
-    border-left: 2px solid $color2;
-    @include down(1024) {
-      margin-left: percentage(500 / 1720);
-    }
-    @include down(500) {
-      margin-left: 0;
-    }
+}
+.section-header h1+p{
+  min-width: 250px;
+  width: percentage(550 / 1920);
+  padding: space(2);
+  margin-left: space(55);
+  border-left: 2px solid $color2;
+
+  @include down(1024) {
+    margin-left: percentage(500 / 1720);
   }
 
-  & .header__footer{
-    position: absolute;
-    bottom: space(10);
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
+  @include down(500) {
+    margin-left: 0;
+  }
+}
+.section-header .header__footer{
+  position: absolute;
+  bottom: space(10);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.section-header .header__footer .social{
+  display: flex;
 
-    & .social{
-      display: flex;
-
-      li{
-        margin-left: space(2);
-      }
-
-      a {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        transition: transform .3s ease-in-out;
-
-        &:hover{
-          transform: translate(0, -5px);
-        }
-        & svg {
-          overflow: visible;
-        }
-
-
-      }
-    }
+  li{
+    margin-left: space(2);
   }
 
-  &--service{
-    min-height: inherit;
-    padding-bottom: 100px;
-    & h1{
-      padding-top: 35.85vh;
-      @include down(500) {
-        margin-left: 0;
-        padding-top: 25vh;
-      }
+  a {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    transition: transform .3s ease-in-out;
+
+    &:hover{
+      transform: translate(0, -3px);
     }
+    & svg {
+      overflow: visible;
+    }
+  }
+}
+.section-header--service{
+  min-height: inherit;
+  padding-bottom: 100px;
+}
+.section-header--service h1{
+  padding-top: 35.85vh;
+  @include down(1280) {
+    padding-top: 30vh;
+  }
+
+  @include down(500) {
+    margin-left: 0;
+    padding-top: 25vh;
   }
 }

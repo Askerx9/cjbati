@@ -1,5 +1,5 @@
 .content{
-  @extend %container;
+  // @extend %container;
   margin-bottom: space(20);
   @include down(400) {
     margin-bottom: space(20);

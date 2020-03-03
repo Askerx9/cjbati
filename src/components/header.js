@@ -11,11 +11,11 @@ const Header = ({ siteTitle }) => {
   const [active, setActive] = useState(false)
   const menuEl = useRef(null);
   const subMenu = useRef(null);
-  const burger = useRef(null);
+  // const burger = useRef(null);
   const tl = gsap.timeline()
 
   const handleMouseenter = () => {
-    setTimeout(() => {
+
       tl.restart()
       tl.set(subMenu.current, {visibility:'visible'}, '#set')
       tl.set(subMenu.current.children, {
@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => {
           duration: .3,
         }
       )
-    }, 300);
+
   }
 
   const handleMouseleave = () => {
@@ -38,34 +38,16 @@ const Header = ({ siteTitle }) => {
   }
 
   useEffect(() => {
+    const m = menuEl.current
     if(window.innerWidth > 900){
-      menuEl.current.addEventListener('mouseenter', handleMouseenter);
-      menuEl.current.addEventListener('mouseleave', handleMouseleave);
+      m.addEventListener('mouseenter', handleMouseenter);
+      m.addEventListener('mouseleave', handleMouseleave);
       return () => {
-        menuEl.current.removeEventListener('mouseenter', () => handleMouseenter);
-        menuEl.current.removeEventListener('mouseleave', () => handleMouseleave);
+        m.removeEventListener('mouseenter', () => handleMouseenter);
+        m.removeEventListener('mouseleave', () => handleMouseleave);
       };
     }
   }, []);
-
-  // const [isSticky, setSticky] = useState(false);
-  // const ref = useRef(null);
-
-  // const handleScroll = () => {
-  //   if(ref.current !== null){
-  //     const refHeight = ref.current.getBoundingClientRect().top + ref.current.getBoundingClientRect().height
-  //     setSticky(window.scrollY > refHeight);
-  //   }
-  // };
-
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', () => handleScroll);
-  //   };
-  // }, []);
 
 
   return (
@@ -89,7 +71,7 @@ const Header = ({ siteTitle }) => {
           <ul>
             <li><Link to="/">Accueil</Link></li>
             <li className="nav__el--sub" ref={menuEl}>
-              <p>Services</p>
+              <p dangerouslySetInnerHTML={{__html: "Services &nbsp; &dtrif;"}}></p>
               <ul className={'subnav'} ref={subMenu}>
                 <li><Link to="/services/peinture">Peinture</Link></li>
                 <li><Link to="/services/renovation">Rénovation</Link></li>
