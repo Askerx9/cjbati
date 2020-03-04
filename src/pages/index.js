@@ -20,19 +20,29 @@ const IndexPage = () => {
 
   useEffect(() => {
     const gradient = CSSRulePlugin.getRule(".section-header--index > div::after");
-
+    const tl = gsap.timeline()
     console.log(gradient)
 
-    gsap.fromTo(gradient, {
+
+
+    tl.fromTo(gradient, {
       cssRule: {
-        backgroundImage: "radial-gradient(0% 0% at 86.5% 29.74%, rgba(0, 0, 0, 0) 0%, #000000 100%)"
+        backgroundImage: "radial-gradient(0% 0% at 86.5% 29.74%, rgba(0, 0, 0, 0) 0%, #000000 100%)",
+        opacity: 1
       }
     },{
       cssRule:{
-        backgroundImage: "radial-gradient(293.86% 293.83% at 86.5% 29.74%, rgba(0, 0, 0, 0) 0%, #000000 100%)"
+        backgroundImage: "radial-gradient(293.86% 293.83% at 86.5% 29.74%, rgba(0, 0, 0, 0) 0%, #000000 100%)",
+        opacity: 0
       },
-      duration: 4,
-      delay: 1.5
+      duration: 7,
+      delay: 1
+    })
+    tl.to(gradient, {
+      cssRule: {
+        display: 'none',
+        zIndex: -1
+      }
     })
   })
 
