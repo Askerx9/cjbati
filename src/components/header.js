@@ -18,10 +18,11 @@ const Header = ({ siteTitle }) => {
 
       tl.restart()
       tl.set(subMenu.current, {visibility:'visible'}, '#set')
-      tl.set(subMenu.current.children, {
-        x: -15,
-        alpha: 0,
-      }, '#set')
+      // tl.set(subMenu.current.children, {
+      //   x: -15,
+      //   alpha: 0,
+      // }, '#set')
+      // tl.fromTo(subMenu.current, {alpha: 0}, {alpha: 1})
       tl.to(subMenu.current.children,
         {
           x: 0,
@@ -39,6 +40,7 @@ const Header = ({ siteTitle }) => {
 
   useEffect(() => {
     const m = menuEl.current
+    console.log(menuEl)
     if(window.innerWidth > 900){
       m.addEventListener('mouseenter', handleMouseenter);
       m.addEventListener('mouseleave', handleMouseleave);

@@ -3,13 +3,15 @@
   // justify-content: flex-end;
   color: #5A5A5A;
   top: -60%;
-  transform: translateY(-50%);
-  margin-bottom: -100px;
+  // transform: translateY(-50%);
+  margin-top: -150px;
+  margin-bottom: space(10);
 
   & .swiper-container{
     margin-right: 0;
     width: percentage(950 / 1920);
     height: auto;
+    max-height: 400px;
     background: #fff;
     box-shadow: 0px -1.77783px 3.48718px rgba(0, 0, 0, 0.0170123), 0px -1.38855px 9.64159px rgba(0, 0, 0, 0.0209053), 0px 3.26508px 23.2132px rgba(0, 0, 0, 0.0294127), 0px 22px 77px rgba(0, 0, 0, 0.07);
     @include down(1349) {
@@ -73,7 +75,7 @@
     @include down(1349) {
       margin-right: auto;
       width: 80%;
-      margin-bottom: space(5);
+      // margin-bottom: space(5);
     }
     @include down(800) {
       margin-right: auto;

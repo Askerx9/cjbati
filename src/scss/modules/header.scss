@@ -75,6 +75,8 @@ header{
         transform: translateX(0);
         padding: 0 0 20px;
         margin-bottom: 20px;
+        background: transparent;
+        color: #fff;
 
         &:after{
           content: "";
@@ -117,13 +119,20 @@ header{
     position: absolute;
     transform: translateX(-10px);
     visibility: hidden;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px -1.77783px 3.48718px rgba(0, 0, 0, 0.0170123), 0px -1.38855px 9.64159px rgba(0, 0, 0, 0.0209053), 0px 3.26508px 23.2132px rgba(0, 0, 0, 0.0294127), 0px 22px 77px rgba(0, 0, 0, 0.07);
+
+    // margin-top: space(2);
 
     & li{
       margin: 0;
       opacity: 0;
       transform: translateX(-20px);
       &:first-child{
-        padding-top: 10px;
+        // padding-top: 10px;
       }
     }
 
