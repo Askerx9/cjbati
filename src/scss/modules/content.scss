@@ -1,7 +1,9 @@
 .content{
   // @extend %container;
   margin-bottom: space(20);
-  @include down(400) {
+  @include down(700) {
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: space(20);
   }
   & h2{

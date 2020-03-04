@@ -9,7 +9,7 @@
   & .swiper-container{
     margin-right: 0;
     width: percentage(950 / 1920);
-    height: em(490, 16);
+    height: auto;
     background: #fff;
     box-shadow: 0px -1.77783px 3.48718px rgba(0, 0, 0, 0.0170123), 0px -1.38855px 9.64159px rgba(0, 0, 0, 0.0209053), 0px 3.26508px 23.2132px rgba(0, 0, 0, 0.0294127), 0px 22px 77px rgba(0, 0, 0, 0.07);
     @include down(1349) {
@@ -19,11 +19,16 @@
     @include down(800) {
       margin-right: auto;
       width: 80%;
+      // height: auto;
     }
   }
 
   & ul{
     font-size: em(24,16);
+  }
+
+  & img{
+    width: 100%;
   }
 
   li{
@@ -35,13 +40,14 @@
     padding: em(150,24) 20% em(100);
     width: percentage(950 / 1920);
     max-height: 490px;
+
     @include down(1024) {
       padding: 40px;
     }
     @include down(800) {
       width: 80%;
     }
-    @include down(400) {
+    @include down(700) {
       width: 100%;
     }
   }
@@ -64,6 +70,17 @@
   & .swiper-container{
     border: space(1) solid #fff;
     width: 700px;
+    @include down(1349) {
+      margin-right: auto;
+      width: 80%;
+      margin-bottom: space(5);
+    }
+    @include down(800) {
+      margin-right: auto;
+      width: 100%;
+      margin-bottom: space(5);
+      // height: auto;
+    }
   }
 }
 

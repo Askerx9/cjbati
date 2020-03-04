@@ -25,7 +25,7 @@
         padding: 20px;
       }
     }
-    @include down(400) {
+    @include down(700) {
       width: 100%;
     }
     & p{
@@ -54,6 +54,7 @@
     display: flex;
     justify-content: space-between;
     @include down(700) {
+      width: 90%;
       flex-direction: column;
     }
 
