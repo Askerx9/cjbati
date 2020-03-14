@@ -38,18 +38,17 @@ const Header = ({ siteTitle }) => {
     tl.reverse()
   }
 
-  useEffect(() => {
-    const m = menuEl.current
-    console.log(menuEl)
-    if(window.innerWidth > 900){
-      m.addEventListener('mouseenter', handleMouseenter);
-      m.addEventListener('mouseleave', handleMouseleave);
-      return () => {
-        m.removeEventListener('mouseenter', () => handleMouseenter);
-        m.removeEventListener('mouseleave', () => handleMouseleave);
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   const m = menuEl.current
+  //   if(window.innerWidth > 900){
+  //     // m.addEventListener('mouseenter', handleMouseenter);
+  //     // m.addEventListener('mouseleave', handleMouseleave);
+  //     return () => {
+  //       m.removeEventListener('mouseenter', () => handleMouseenter);
+  //       m.removeEventListener('mouseleave', () => handleMouseleave);
+  //     };
+  //   }
+  // }, []);
 
 
   return (
@@ -72,16 +71,13 @@ const Header = ({ siteTitle }) => {
         <nav className={'nav ' +(active ? 'is-active' : '')}>
           <ul>
             <li><Link to="/">Accueil</Link></li>
-            <li className="nav__el--sub" ref={menuEl}>
-              <p dangerouslySetInnerHTML={{__html: "Services &nbsp; &dtrif;"}}></p>
-              <ul className={'subnav'} ref={subMenu}>
-                <li><Link to="/services/peinture">Peinture</Link></li>
-                <li><Link to="/services/renovation">Rénovation</Link></li>
-                <li><Link to="/services/sol">Sol et parquet</Link></li>
-                <li><Link to="/services/decoration">Décoration</Link></li>
-                <li><Link to="/services/plafonnage">Plafonnage</Link></li>
-              </ul>
-            </li>
+            <li><Link to="/services/peinture">Peinture</Link></li>
+            <li><Link to="/services/renovation">Rénovation</Link></li>
+            <li><Link to="/services/sol">Sol et parquet</Link></li>
+            <li><Link to="/services/decoration">Décoration</Link></li>
+            <li><Link to="/services/plafonnage">Plafonnage</Link></li>
+            <li><Link to="/services/plomberie">Plomberie</Link></li>
+            <li><Link to="/services/electricite">Électricité</Link></li>
             <li className="header__contact">
 
                 <a href="tel:+32471591024" className="link link--tel"> <Phone /> +32 (0) 471 59 10 24</a>

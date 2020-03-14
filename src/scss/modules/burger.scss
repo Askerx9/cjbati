@@ -2,7 +2,7 @@
   cursor: pointer;
   display: none;
   z-index: 9999;
-  @include down(900) {
+  @include down(1400) {
     display: block;
   }
 

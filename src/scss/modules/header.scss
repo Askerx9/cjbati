@@ -10,7 +10,7 @@ header{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    @include down(900) {
+    @include down(1400) {
       justify-content: space-between;
     }
   }
@@ -32,7 +32,7 @@ header{
 
   & .nav{
     flex-grow: 1;
-    @include down(900) {
+    @include down(1400) {
       position: fixed;
       top: 0;
       right: 0;
